@@ -1,0 +1,12 @@
+# Template file for 'wib'
+pkgname=wib
+version=0.1.0
+revision=1
+archs="x86_64"
+build_style=cargo
+short_desc="Wayland Idle Blocker"
+maintainer="Stefan Furne <stefan@furne.net>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/stefur/wib"
+distfiles="https://github.com/stefur/wib/archive/refs/tags/v${version}.tar.gz"
+checksum=16cb5407100e9cadb420757a68e1f37511ea6e254facc2d96edae14c5b12b9db

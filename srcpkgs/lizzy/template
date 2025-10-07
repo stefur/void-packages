@@ -1,0 +1,13 @@
+# Template file for 'lizzy'
+pkgname=lizzy
+version=0.2.0
+revision=2
+archs="x86_64"
+build_style=cargo
+depends="dbus"
+short_desc="Customizable Waybar module for media playback that uses DBus signals"
+maintainer="Stefan Furne <stefan@furne.net>"
+license="MIT"
+homepage="https://github.com/stefur/lizzy"
+distfiles="https://github.com/stefur/lizzy/archive/refs/tags/v${version}.tar.gz"
+checksum=3d6be18da005daf16e55017acf963d737a4e7e106924f2e5534007fa60e8c5c5
