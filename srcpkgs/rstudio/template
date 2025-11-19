@@ -1,0 +1,26 @@
+# Template file for 'rstudio'
+pkgname=rstudio
+version=2025.09.2
+revision=1
+_subver=418
+archs="x86_64"
+short_desc="IDE designed to support multiple languages, including both R and Python"
+maintainer="Stefan Furne <stefan@furne.net>"
+license="AGPL-3.0-only"
+homepage="https://posit.co"
+changelog="https://docs.posit.co/ide/news/"
+distfiles="https://download1.rstudio.org/electron/jammy/amd64/rstudio-$version-$_subver-amd64.deb"
+checksum=1eca6ca357ab94dc8344ae1e5326252cb6a40b829c6b1ecc8685cfb3a78a6869
+nopie_files=/usr/lib/rstudio/resources/app/bin/copilot-language-server/copilot-language-server
+
+do_install() {
+	vmkdir usr/bin
+
+	vcopy lib usr
+	vcopy share usr
+
+	vlicense lib/rstudio/LICENSE
+
+	ln -sf "/usr/lib/rstudio/rstudio" "${DESTDIR}/usr/bin/rstudio"
+
+}
