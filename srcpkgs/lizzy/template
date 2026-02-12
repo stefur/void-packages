@@ -1,7 +1,7 @@
 # Template file for 'lizzy'
 pkgname=lizzy
 version=0.2.1
-revision=2
+revision=1
 archs="x86_64"
 build_style=cargo
 depends="dbus"
@@ -10,4 +10,4 @@ maintainer="Stefan Furne <stefan@furne.net>"
 license="MIT"
 homepage="https://github.com/stefur/lizzy"
 distfiles="https://github.com/stefur/lizzy/archive/refs/tags/v${version}.tar.gz"
-checksum=3d6be18da005daf16e55017acf963d737a4e7e106924f2e5534007fa60e8c5c5
+checksum=921d7ffcc7286bf110ec6adddd520efc25b4d29ba2c81119767785ff5fa30fa4
