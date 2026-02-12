@@ -1,13 +1,21 @@
 # Template file for 'lizzy'
 pkgname=lizzy
-version=0.2.1
+version=0.2.2
 revision=1
 archs="x86_64"
-build_style=cargo
 depends="dbus"
+hostmakedepends="cargo"
 short_desc="Customizable Waybar module for media playback that uses DBus signals"
 maintainer="Stefan Furne <stefan@furne.net>"
 license="MIT"
 homepage="https://github.com/stefur/lizzy"
 distfiles="https://github.com/stefur/lizzy/archive/refs/tags/v${version}.tar.gz"
-checksum=921d7ffcc7286bf110ec6adddd520efc25b4d29ba2c81119767785ff5fa30fa4
+checksum=fd0993538c370235a37c76da86265313c96676f0f490f84125d0676fc29d420b
+
+do_build() {
+	cargo build --release --target ${RUST_TARGET} ${make_build_args}
+}
+
+do_install() {
+	vbin target/${RUST_TARGET}/release/lizzy
+}
