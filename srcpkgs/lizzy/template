@@ -1,6 +1,6 @@
 # Template file for 'lizzy'
 pkgname=lizzy
-version=0.2.0
+version=0.2.1
 revision=2
 archs="x86_64"
 build_style=cargo
